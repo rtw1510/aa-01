@@ -19,7 +19,7 @@
 <div class="login-aside">
     <div id="o-box-up"></div>
     <div id="o-box-down"  style="table-layout:fixed;">
-        <form class="registerform"action="rtw/login.do">
+        <form class="registerform"action="rtw/login.do" method="post">
             <div class="fm-item">
                 <label class="form-label">MISS系统登陆：</label>
                 <input type="text" maxlength="100" name="username" id="username" class="i-text" ajaxurl="demo/valid.jsp"  datatype="s6-18" errormsg="用户名至少6个字符,最多18个字符！"  >

@@ -8,4 +8,7 @@
         from user
         where username=#{username} and password=#{password}
     </select>
+    <select id="selectUsers" resultType="User">
+        select id,username,age,sex,email from user
+    </select>
 </mapper>

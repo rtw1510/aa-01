@@ -24,16 +24,17 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
         <property name="dataSource" ref="datasource"/>
     </bean>
 
-    <!--<tx:advice id="txadvice" transaction-manager="dataSourceTransactionManager">
-        <tx:attributes>
-            <tx:method name="addtStudent" isolation="DEFAULT" propagation="REQUIRED"/>
-        </tx:attributes>
-    </tx:advice>
+        <tx:advice id="txadvice" transaction-manager="dataSourceTransactionManager">
+            <tx:attributes>     
+                <tx:method name="addtStudent" isolation="DEFAULT" propagation="REQUIRED"/>
+            </tx:attributes>
+        </tx:advice>
 
-    <aop:config>
-        <aop:pointcut id="pointcut1" expression="execution(* com.rtw.re0.service.*.*(..))"/>
-        <aop:advisor advice-ref="txadvice" pointcut-ref="pointcut1"/>
-    </aop:config>-->
+        <aop:config>
+            <aop:pointcut id="pointcut1" expression="execution(* com.rtw.re0prj.service.*.*(..))"/>
+            <aop:advisor advice-ref="txadvice" pointcut-ref="pointcut1"/>
+        </aop:config>
+
     <context:component-scan base-package="com.rtw.re0prj.service"/>
 
     <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
